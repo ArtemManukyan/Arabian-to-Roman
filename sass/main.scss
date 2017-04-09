@@ -1,0 +1,54 @@
+@import '../libs/normalize-scss/sass/normalize';
+@include normalize();
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #eee;
+}
+
+.content {
+	position: absolute;
+	width: 500px;
+	padding: 50px;
+	background: #fff;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 0 1px 3px #ccc;
+
+	input {
+		width: 100%;
+		font-size: 30px;
+		padding: 10px;
+		text-align: center;
+		
+		&:focus {
+			outline: 2px solid blue;	
+		}
+
+		&:invalid {
+			outline: 2px solid red;
+		}
+	}
+
+	#output {
+		font: 20px serif;
+		color: grey;
+		text-align: center;
+		margin-top: 40px;
+		max-width: 100%;
+
+		&.result {
+			font-size: 40px;
+			color: #050505;
+			font-weight: bold;
+			letter-spacing: .03em;
+			word-break: break-all;
+		}
+	}
+}
